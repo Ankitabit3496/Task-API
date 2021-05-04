@@ -11,7 +11,7 @@ const databaseName = 'task-manager-api'
 const id = new ObjectID()
 console.log(id)
 
-MongoClient.connect(connectionURL,{useUnifiedTopology: true}, (error, client) => {
+MongoClient.connect(connectionURL,{useUnifiedTopology: true,useNewUrlParser: true,}, (error, client) => {
      if(error){
          return console.log('unable to connect')
      }
@@ -69,7 +69,8 @@ MongoClient.connect(connectionURL,{useUnifiedTopology: true}, (error, client) =>
      }).catch((error)=>{
          console.log(error)
      })
-
+    
+     
  })
 
 
