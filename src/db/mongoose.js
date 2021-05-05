@@ -20,24 +20,13 @@ mongoose.connect('mongodb://127.0.0.1:27017/task-manager-api2',{
 //     console.log('Error!', error)
 // })
 
-const Task = mongoose.model('Task',{
-    description: {
-       type: String,
-       required: true,
-       trim: true
-    },
-    completed: {
-       type: Boolean,
-       default: false
-    }
-})
 
-const you = new Task({
-    description: 'you are my next target',
-    completed: true
-})
-you.save().then(()=>{
-    console.log(you)
-}).catch((error)=>{
-    console.log('Error!', error)
-})
+// const you = new Task({
+//     description: 'you are my next target',
+//     completed: true
+// })
+// you.save().then(()=>{
+//     console.log(you)
+// }).catch((error)=>{
+//     console.log('Error!', error)
+// })
